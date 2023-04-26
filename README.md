@@ -6,5 +6,8 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/8be704a6b6421a5e1130/maintainability)](https://codeclimate.com/github/avkapitanov/frontend-project-46/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/8be704a6b6421a5e1130/test_coverage)](https://codeclimate.com/github/avkapitanov/frontend-project-46/test_coverage)
 
-### Video demonstration:
+### Video demonstration of JSON files comparison:
 [![asciicast](https://asciinema.org/a/T29bW0tzzjysoXih4ciPKBgfz.svg)](https://asciinema.org/a/T29bW0tzzjysoXih4ciPKBgfz)
+
+### Video demonstration of YML files comparison:
+[![asciicast](https://asciinema.org/a/ZbVXbiRKkbfybQ6jOiREPETDF.svg)](https://asciinema.org/a/ZbVXbiRKkbfybQ6jOiREPETDF)
