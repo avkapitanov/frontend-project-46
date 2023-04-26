@@ -1,5 +1,6 @@
 import { STATUSES } from './const.js';
 
+// eslint-disable-next-line no-unused-vars
 const formatResult = (diff, format = 'text') => {
   const diffObj = Object.keys(diff)
     .reduce((acc, diffKey) => {
