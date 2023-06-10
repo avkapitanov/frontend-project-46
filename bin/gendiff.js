@@ -10,7 +10,7 @@ program
   .version('1.0.0')
   .argument('filepath1', 'First filepath to compare')
   .argument('filepath2', 'Second filepath to compare')
-  .option('-f, --format <type>', 'output format')
+  .option('-f, --format <type>', 'output format', 'stylish')
   .action((filepath1, filepath2, options) => {
     const { format } = options;
 

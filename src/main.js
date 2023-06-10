@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import parseFile from './fileParser.js';
 import buildTree from './treeGenerator.js';
-import formatResult from './formatter.js';
+import formatResult from './formatters/index.js';
 
 const buildAbsolutePath = (filepath) => path.resolve(process.cwd(), filepath);
 

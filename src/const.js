@@ -3,4 +3,5 @@ export const STATUSES = {
   ADDED: 'ADDED',
   EQUAL: 'EQUAL',
   NOT_EQUAL: 'NOT_EQUAL',
+  NESTED: 'NESTED',
 };
