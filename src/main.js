@@ -20,7 +20,7 @@ const generateDiff = (filepath1, filepath2, format) => {
 
   const diff = buildTree(data1, data2);
 
-  return formatResult(diff, format);
+  return formatResult(diff, format || 'stylish');
 };
 
 export default generateDiff;
