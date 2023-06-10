@@ -39,22 +39,21 @@ const formatValue = (node, depth, formatChildren) => {
 };
 
 const stylish = (diff) => {
-  const formatDeeper = (data, depth = 1) => Object.keys(data)
-    .reduce((result, diffKey, ind, list) => {
-      const node = data[diffKey];
-      const diffNode = formatValue(node, depth, formatDeeper);
+  const format = (data, depth = 1) => Object.keys(data)
+    .reduce((result, key, ind, list) => {
+      const formattedDiff = formatValue(data[key], depth, format);
       const withoutEndingBraceStr = result.slice(0, result.length - 1);
 
       if (ind === list.length - 1) {
         const endBraceIndent = '    '.repeat(depth - 1);
 
-        return `${withoutEndingBraceStr}${diffNode}${endBraceIndent}}`;
+        return `${withoutEndingBraceStr}${formattedDiff}${endBraceIndent}}`;
       }
 
-      return `${withoutEndingBraceStr}${diffNode}}`;
+      return `${withoutEndingBraceStr}${formattedDiff}}`;
     }, '{\n}');
 
-  return formatDeeper(diff);
+  return format(diff);
 };
 
 export default stylish;
