@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { STATUSES } from '../const.js';
+import STATUSES from '../const.js';
 
 const getIndent = (depth) => '    '.repeat(depth).slice(0, -2);
 
@@ -19,11 +19,9 @@ const formatValue = (node, depth, formatChildren) => {
     type, key, value, children, secondValue,
   } = node;
 
-  let result;
   switch (type) {
     case STATUSES.NESTED:
-      result = formatChildren(children, depth + 1);
-      return `${getIndent(depth)}  ${key}: ${result}\n`;
+      return `${getIndent(depth)}  ${key}: ${formatChildren(children, depth + 1)}\n`;
     case STATUSES.DELETED:
       return `${getIndent(depth)}- ${node.key}: ${processValue(value, depth)}\n`;
     case STATUSES.ADDED:

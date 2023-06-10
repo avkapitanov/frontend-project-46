@@ -1,7 +1,9 @@
-export const STATUSES = {
+const STATUSES = {
   DELETED: 'DELETED',
   ADDED: 'ADDED',
   EQUAL: 'EQUAL',
   NOT_EQUAL: 'NOT_EQUAL',
   NESTED: 'NESTED',
 };
+
+export default STATUSES;

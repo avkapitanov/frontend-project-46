@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { STATUSES } from './const.js';
+import STATUSES from './const.js';
 
 const areAllObjects = (first, second) => {
   const isFirstObject = _.isPlainObject(first);
