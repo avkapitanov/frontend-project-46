@@ -8,7 +8,7 @@ import generateDiff from '../src/main.js';
 const dirname = process.cwd();
 const getAbsolutePath = (filename) => path.join(dirname, '__fixtures__', filename);
 
-describe.each([['stylish'], ['plain']])('Test %s formatter', (formatter) => {
+describe.each([['stylish'], ['plain'], ['json']])('Test %s formatter', (formatter) => {
   const pathOfExpectedValue = getAbsolutePath(`${formatter}.txt`);
   const expected = readFileSync(pathOfExpectedValue, 'utf-8');
 

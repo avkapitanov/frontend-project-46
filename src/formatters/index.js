@@ -7,6 +7,8 @@ const formatDiff = (diff, formatterName) => {
       return stylishFormat(diff);
     case 'plain':
       return plainFormat(diff);
+    case 'json':
+      return JSON.stringify(diff, null, 2);
     default:
       throw new Error(`Unknown formatter name - ${formatterName}`);
   }
