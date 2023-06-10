@@ -8,24 +8,15 @@ import generateDiff from '../src/main.js';
 const dirname = process.cwd();
 const getAbsolutePath = (filename) => path.join(dirname, '__fixtures__', filename);
 
-describe('Generate Diff', () => {
-  const pathOfExpectedValue = getAbsolutePath('plain.txt');
+describe.each([['stylish'], ['plain']])('Test %s formatter', (formatter) => {
+  const pathOfExpectedValue = getAbsolutePath(`${formatter}.txt`);
   const expected = readFileSync(pathOfExpectedValue, 'utf-8');
 
-  test('Nested JSON files', () => {
-    const filepath1 = getAbsolutePath('file1.json');
-    const filepath2 = getAbsolutePath('file2.json');
+  test.each([['json'], ['yml']])('%s files comparison', (extension) => {
+    const filepath1 = getAbsolutePath(`file1.${extension}`);
+    const filepath2 = getAbsolutePath(`file2.${extension}`);
 
-    const result = generateDiff(filepath1, filepath2, 'stylish');
-
-    expect(result).toBe(expected);
-  });
-
-  test('Nested YML files', () => {
-    const filepath1 = getAbsolutePath('file1.yml');
-    const filepath2 = getAbsolutePath('file2.yml');
-
-    const result = generateDiff(filepath1, filepath2, 'stylish');
+    const result = generateDiff(filepath1, filepath2, formatter);
 
     expect(result).toBe(expected);
   });

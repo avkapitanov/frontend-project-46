@@ -14,3 +14,6 @@
 
 ### Video demonstration of JSON nested files comparison:
 [![asciicast](https://asciinema.org/a/KG8F3LX0Eku2wfk71q49hUDJu.svg)](https://asciinema.org/a/KG8F3LX0Eku2wfk71q49hUDJu)
+
+### Video demonstration of JSON nested files comparison with plain formatter:
+[![asciicast](https://asciinema.org/a/DOSDW7TId70jbZKXwwGLxjhlG.svg)](https://asciinema.org/a/DOSDW7TId70jbZKXwwGLxjhlG)
